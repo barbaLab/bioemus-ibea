@@ -1,7 +1,0 @@
-# Disregard this entire folder
-*
-/*/*
-!*.xpr
-!*.wcfg
-# Except this .gitignore file
-!.gitignore
