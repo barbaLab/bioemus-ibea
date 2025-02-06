@@ -13,6 +13,4 @@ pandas
 scikit-learn
 scipy
 
-## Requirements to control the optimization from windows:
-##      Run "sudo apt-get install sshpass" in the bash
 
