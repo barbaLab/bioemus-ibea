@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "[BioemuS] Setup environment variables and scripts permissions"
-DIR="$( cd "$( dirname -- "$0" )" && pwd )"
+DIR="$( cd "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )"
 export BIOEMUS_PATH="$DIR";
 chmod +x $BIOEMUS_PATH/*.sh
 chmod +x $BIOEMUS_PATH/app/*.sh
