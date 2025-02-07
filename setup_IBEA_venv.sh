@@ -1,31 +1,34 @@
 #!/bin/bash
 
-# Define virtual environment name
-VENV_DIR="IBEAvenv"
-
-# Check if Python is installed
-if ! command -v python3 &> /dev/null; then
-    echo "Python3 is not installed. Please install it first."
-    exit 1
+echo "Checking if python3-venv is installed..."
+if ! dpkg -s python3-venv &> /dev/null; then
+    echo "python3-venv is not installed. Installing..."
+    sudo apt update && sudo apt install -y python3-venv
+else
+    echo "python3-venv is already installed."
 fi
 
-# Create virtual environment
 echo "Creating virtual environment..."
-python3 -m venv $VENV_DIR
+python3 -m venv IBEAvenv
 
-# Activate virtual environment
-source $VENV_DIR/bin/activate
+echo "Activating virtual environment..."
+source IBEAvenv/bin/activate
 
-# Upgrade pip
 echo "Upgrading pip..."
 pip install --upgrade pip
 
-# Install dependencies
-if [ -f "requirements.txt" ]; then
-    echo "Installing dependencies..."
-    pip install -r requirements.txt
+# Check if pyqt5 is installed, it is not necessary for IBEA and breaks the venv installer when attempting to install it.
+echo "Checking if pyqt5 is installed..."
+python -c "import PyQt5" 2>/dev/null
+
+if [ $? -eq 0 ]; then
+    echo "pyqt5 is already installed. Skipping installation."
 else
-    echo "No requirements.txt found. Skipping dependency installation."
+    echo "pyqt5 is not installed. Attempting installation..."
+    pip install pyqt5 || { echo "Failed to install pyqt5. Skipping."; }
 fi
 
-echo "Virtual environment setup complete! Run 'source venv/bin/activate' to activate."
+echo "Installing dependencies..."
+pip install -r requirements.txt
+
+echo "Virtual environment setup complete! Run 'source IBEAvenv/bin/activate' to activate."
