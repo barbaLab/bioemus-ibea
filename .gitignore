@@ -8,3 +8,6 @@ data/*
 export/*
 IBEAforBioemus/Goals/*
 config/*
+IBEAvenv/
+Output.txt
+monitor.txt
