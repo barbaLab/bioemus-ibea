@@ -5,15 +5,15 @@ Bioemus version compatible with Indicator-Based Evolutionary Algorithm (IBEA) to
 
 ## Installation
 
-#### Setup ubuntu 22.04 operating system for Kria
+### 1. Setup ubuntu 22.04 operating system for Kria
 Follow the instructions at this [link](https://xilinx.github.io/kria-apps-docs/kr260/linux_boot/ubuntu_22_04/build/html/docs/intro.html) to install Ubuntu on the board (by flashing it in the microSD).
-#### Connect via SSH
+### 2. Connect via SSH
 - Connect USB serial (1) to PC (USB micro B).
 - Communicate with the board using Putty (Windows) or Minicom (macOS/Linux).
 - After inserting the password, check the IP address with the `ifconfig` command (it should be under `eth0` or `eth1`, next the `inet:` word).
 - Close the terminal and disconnect the USB cable.
 - Connection via SSH `ssh ubuntu@[IPaddress]`
-#### Setup the system to work with Bioemus
+### 3. Setup the system to work with Bioemus
 - Update system
 ```Bash
 sudo apt-get update && sudo apt upgrade
@@ -45,7 +45,7 @@ sudo snap install snap-store
 sudo apt install net-tools
 sudo apt install devmem2
 ```
-#### Clone this repository
+### 4. Clone this repository
 Clone this repository on the board at `~/`. The folder should be renamed "bioemus".
 ```Bash
 git clone https://github.com/barbaLab/bioemus-ibea.git bioemus
@@ -54,7 +54,7 @@ All the system is already built, you do not have to run the `build.sh` script (i
 
 ## Usage
 
-#### Creating and launching a simulation
+### Creating and launching a simulation
 1. Configure the network using the `mainIBEA.ipynb` notebook. By running, it should generate a `.json` and a `.txt` files in the `config/` folder.
 2. Call the bash script to begin the simulation:
 ```Bash
@@ -62,7 +62,7 @@ source init.sh
 source ./launch_app ./config/[json_file.json]
 ```
 This runs the simulation and produce a `.bin` file within the folder data, containing the raster plot of the simulation.
-#### Running IBEA algorithm
+### Running IBEA algorithm
 1. To run the IBEA algorithm directly within the ubuntu onboard system you have first to setup the python venv `IBEAvenv` by running on bash:
 ``` Bash
 source setup_IBEA_venv.sh
