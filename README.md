@@ -4,7 +4,7 @@ Bioemus version compatible with Indicator-Based Evolutionary Algorithm (IBEA) to
 **WARNING**: this code is different from the original one published [Nature Communication](https://doi.org/10.1038/s41467-024-48905-x), which is instead available on this [github url](https://github.com/Ceramic-Blue-Tim/bioemus/tree/main). It contains major changes in the configuration files (the "rat brain" model) and the possibility to stimulate from an output pin of the board (several changes in the code regarding bioemus-genoa). This repository can be cloned inside a new board and used to run locally the IBEA algorithm, directly on the Ubuntu onboard Processing System.
 
 ## Installation
----
+
 #### Setup ubuntu 22.04 operating system for Kria
 Follow the instructions at this [link](https://xilinx.github.io/kria-apps-docs/kr260/linux_boot/ubuntu_22_04/build/html/docs/intro.html) to install Ubuntu on the board (by flashing it in the microSD).
 #### Connect via SSH
@@ -53,7 +53,7 @@ git clone https://github.com/barbaLab/bioemus-ibea.git bioemus
 All the system is already built, you do not have to run the `build.sh` script (in constrast with the offial Bioemus guide).
 
 ## Usage
----
+
 #### Creating and launching a simulation
 1. Configure the network using the `mainIBEA.ipynb` notebook. By running, it should generate a `.json` and a `.txt` files in the `config/` folder.
 2. Call the bash script to begin the simulation:
