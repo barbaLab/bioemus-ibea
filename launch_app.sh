@@ -10,8 +10,8 @@ fi
 
 # Application parameters
 path_swconfig_json=$1
-debug_mode="true"
-print_swconfig="false"
+debug_mode="false"
+print_swconfig="true"
 sweep_progress=100
 
 # Launch application
