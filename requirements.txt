@@ -3,7 +3,7 @@
 numpy
 matplotlib
 pyqtgraph
-pyqt5
+# pyqt5
 jsbeautifier
 zmq
 ipykernel
