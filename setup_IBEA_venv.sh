@@ -24,8 +24,9 @@ python -c "import PyQt5" 2>/dev/null
 if [ $? -eq 0 ]; then
     echo "pyqt5 is already installed. Skipping installation."
 else
-    echo "pyqt5 is not installed. Attempting installation..."
-    pip install pyqt5 || { echo "Failed to install pyqt5. Skipping."; }
+    # echo "pyqt5 is not installed. Attempting installation..."
+    # pip install pyqt5 || { echo "Failed to install pyqt5. Skipping."; }
+    echo "Skipping pyqt5, it is required to see the spike monitoring or other GUI, disabled in this IBEA onboard version of Bioemus because breaks the code (no pre-built wheel for this package with this python version)"
 fi
 
 echo "Installing dependencies..."
