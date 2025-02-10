@@ -50,8 +50,11 @@ Clone this repository on the board at `~/`. The folder should be renamed "bioemu
 ```Bash
 git clone https://github.com/barbaLab/bioemus-ibea.git bioemus
 ```
-All the system is already built, you do not have to run the `build.sh` script (in constrast with the offial Bioemus guide).
-
+Build the drivers to work properly
+```Bash
+cd bioemus
+source ./build.sh
+```
 ## Usage
 
 ### Creating and launching a simulation
