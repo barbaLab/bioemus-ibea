@@ -1,5 +1,4 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
 *.py[cod]
 *$py.class
 
@@ -11,3 +10,5 @@ config/*
 IBEAvenv/
 Output.txt
 monitor.txt
+**/__pycache__/
+configuration/**/__pycache__

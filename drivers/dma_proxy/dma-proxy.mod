@@ -1,2 +1,2 @@
-/home/ubuntu/bioemus_new/drivers/dma_proxy/dma-proxy.o
+/home/ubuntu/bioemus/drivers/dma_proxy/dma-proxy.o
 

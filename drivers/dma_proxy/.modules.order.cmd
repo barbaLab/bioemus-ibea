@@ -1,1 +1,1 @@
-cmd_/home/ubuntu/bioemus_new/drivers/dma_proxy/modules.order := {   echo /home/ubuntu/bioemus_new/drivers/dma_proxy/dma-proxy.ko; :; } | awk '!x[$$0]++' - > /home/ubuntu/bioemus_new/drivers/dma_proxy/modules.order
+cmd_/home/ubuntu/bioemus/drivers/dma_proxy/modules.order := {   echo /home/ubuntu/bioemus/drivers/dma_proxy/dma-proxy.ko; :; } | awk '!x[$$0]++' - > /home/ubuntu/bioemus/drivers/dma_proxy/modules.order
