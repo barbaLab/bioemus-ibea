@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Check arguments and usage guide
 if [ "$#" -lt 1 ]; then
     echo "Usage: $0 <path_swconfig_json> <debug_mode> <print_swconfig> <sweep_progress>"
